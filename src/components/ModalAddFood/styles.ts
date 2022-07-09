@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 import { Form as Unform } from '@unform/web';
 
-export const Form = styled(Unform)`
+interface FormProps {
+  children?: JSX.Element|JSX.Element[];
+}
+export const Form = styled(Unform)<FormProps>`
   padding: 48px 40px;
   display: flex;
   flex-direction: column;
